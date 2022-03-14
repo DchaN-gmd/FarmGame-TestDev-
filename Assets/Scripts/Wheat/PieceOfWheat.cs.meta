@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 16582c98c2e3e7443bf900e93a3495b3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _wheatPack: {fileID: 2845088508029634056, guid: a3ef784ec5efd0740bd511299eba1423, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
