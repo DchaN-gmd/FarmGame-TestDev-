@@ -34,7 +34,8 @@ public class Scythe : MonoBehaviour
         lowerHull.AddComponent<Rigidbody>();
         lowerHull.AddComponent<MeshCollider>().convex = true;
         lowerHull.AddComponent<PieceOfWheat>().isUpperPiece = false;
-        _objectToSlice.SetActive(false);
+
+        _objectToSlice.GetComponentInParent<WheatPlace>().GrowWheat();
     }
 
     private SlicedHull GetSlicedObject(GameObject objectToSlice, Material objectMaterial = null)
