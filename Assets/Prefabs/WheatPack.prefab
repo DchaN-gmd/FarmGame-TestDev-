@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6579288217129899610}
   - component: {fileID: 6579288217126999674}
   - component: {fileID: 6579288217128129722}
-  - component: {fileID: 6462852881124883001}
   - component: {fileID: 2845088508029634056}
+  - component: {fileID: 9061588492886566042}
   m_Layer: 0
   m_Name: WheatPack
   m_TagString: Untagged
@@ -83,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6462852881124883001
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6579288217130322554}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 0f50786d35eebcf44805f9d5fb326c11, type: 3}
 --- !u!114 &2845088508029634056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,3 +95,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e2c3c43ef45c1419179d006907d644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _durationOfJump: 0.8
+  _jumpPower: 1.2
+--- !u!65 &9061588492886566042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579288217130322554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5131302, y: 0.36647043, z: 0.4875347}
+  m_Center: {x: -0.0114277825, y: 0.16427515, z: 0.021046095}
