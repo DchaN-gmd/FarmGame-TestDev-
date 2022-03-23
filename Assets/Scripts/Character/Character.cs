@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof (Rigidbody))]
+[RequireComponent(typeof(Rigidbody))]
 public class Character : MonoBehaviour
 {
     [SerializeField] private FloatingJoystick _joystick;
@@ -51,7 +51,11 @@ public class Character : MonoBehaviour
             _animator.SetBool("isHarvesting", true);
             _scythe.SetActive(true);
         }
-        else
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out Wheat wheat))
         {
             _animator.SetBool("isHarvesting", false);
             _scythe.SetActive(false);

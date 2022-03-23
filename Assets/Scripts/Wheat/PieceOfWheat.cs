@@ -6,7 +6,7 @@ public class PieceOfWheat : MonoBehaviour
     public bool isUpperPiece;
     public static UnityAction<Vector3> UpperPieceFalled;
 
-    private float _timeToDestroy = 2f;
+    private float _timeToDestroy = 2.5f;
 
     private void Start()
     {

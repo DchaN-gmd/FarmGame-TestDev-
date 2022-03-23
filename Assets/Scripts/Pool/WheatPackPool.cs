@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class WheatPackPool : MonoBehaviour
 {
+    
     [SerializeField] private WheatPack _prefab;
     [SerializeField] private int _count;
     [SerializeField] private bool _autoExpand;
 
     private PoolMono<WheatPack> _pool;
-    
+
     private void Start()
     {
         _pool = new PoolMono<WheatPack>(_prefab, _count, transform);
@@ -28,5 +29,15 @@ public class WheatPackPool : MonoBehaviour
     {
         var element = _pool.GetFreeElement();
         element.transform.position = piecePosition;
+    }
+
+    public void RestoreElement(WheatPack pack)
+    {
+        if(pack == null)
+        {
+            return;
+        }
+        _pool.AddElement(pack);
+        pack.transform.parent = transform;
     }
 }

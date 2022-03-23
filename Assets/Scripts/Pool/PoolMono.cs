@@ -75,4 +75,10 @@ public class PoolMono<T> where T: MonoBehaviour
 
         throw new Exception($"There has no element of {typeof(T)} type");
     }
+
+    public void AddElement(T element)
+    {
+        _pool.Add(element);
+        element.gameObject.SetActive(false);
+    }
 }
